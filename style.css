@@ -1,0 +1,810 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+::-webkit-scrollbar{
+    background: white;
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb{
+ background: rgb(48, 47, 47);
+}
+
+
+
+body {
+    background: black;
+    color: #ededed;
+    min-height: 100vh;
+    justify-content: center;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding: 5rem;
+}
+
+
+header {
+    font-family: 'Poppins', sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 999;
+    transition: 0.5s;
+}
+
+header.sticky
+{
+    font-family: 'Poppins', sans-serif;
+    padding: 15px 100px;
+    background: black;
+}
+
+.logo {
+    font-size: 25px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+    font-family: 'Poppins', sans-serif;
+}
+
+.logo:hover{
+    color: white;
+}
+
+.text{
+    font-size: 18px;
+    align-items: left;
+}
+
+header .menu{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu a {
+    font-size: 18px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+    position:relative;
+}
+
+
+.btn{
+    display: none;
+    transition: 0.4s;
+    color: #ededed;
+}
+
+.btn:hover{
+    color: white;
+    cursor: pointer;
+}
+
+.menu a:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    background-color: white;
+    height: 3px;
+    width: 0%;
+    left: 35%;
+    bottom: -10px;
+    transition: 0.3s;
+    transform: scaleX(0);
+}
+
+.menu a:hover::after{
+    color: white;
+    transform: scaleX(2);
+    width: 21%;
+}
+
+header.sticky .menu a:after{
+    background-color: white;
+}
+
+header.sticky .menu a:hover {
+    color: white;
+}
+
+header.sticky .logo {
+    font-size: large;
+}
+
+header.sticky a
+{
+    color: #ededed;
+}
+header.sticky a:hover
+{
+    color: white;
+}
+
+.menu a:hover,
+.menu a:active {
+    color: white;
+}
+
+.home {
+    height: 100vh;
+    max-width: 80vw;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    padding: 20px 100px;
+    font-family: 'Poppins', sans-serif;
+}
+
+#like {
+    color: white;
+}
+
+.home-content{
+    justify-content: left;
+    align-items: left;
+}
+.home-content h4{
+    font-weight: 700;
+    line-height: 1.3;
+    margin-left: 400px;
+    font-family: 'Poppins', sans-serif;
+}
+
+#typewriter {
+    color: #2c99ff;
+}
+
+#cursor {
+    animation: blink 1s linear infinite;
+    color: #ededed;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 100%;
+    }
+    50% {
+        opacity: 0%;
+    }
+}
+
+.home-content h3 {
+    font-size: 32px;
+    font-weight: 700;
+    color: black;
+}
+
+.home-content p {
+    font-size: 16px;
+    margin: 20px 0 40px;
+}
+
+#red{
+    position: static;
+    margin-top: -230px;
+    margin-left: 800px;
+    width: 390px;
+    height: 300px;
+}
+
+.email{
+    visibility: hidden;
+}
+
+#blue{
+    position: absolute;
+    margin-top: 10px;
+    width: 30%;
+    left: 5%;
+}
+
+#books{
+    position: absolute;
+    margin-top: -10px;
+    width: 30%;
+    left: 5%;
+}
+
+#Certificates{
+    display: flexbox;
+    margin-top: -20px;
+    width: 30%;
+    left: 5%;
+}
+
+#workexperience{
+    position: absolute;
+    margin-top: -50px;
+    width: 30%;
+    left: 5.5%;
+}
+
+#skills{
+    position: absolute;
+    width: 30%;
+    margin-top: -72px;
+    left: 5%;
+}
+
+@media (max-width: 1192px){
+    #blue{
+        position: absolute;
+        margin-top: -30px;
+        width: 30%;
+        left: 5%;
+    }
+    #red{
+       left:-200px;
+       top:1140px;
+    }
+    
+    #info2{
+        padding: 20px;
+        top: 256%;
+        font-size: 20px;
+        left: 0%;
+        text-align: left;
+    }
+ 
+
+    #Projects{
+        position: absolute;
+        width: 25%;
+        margin-top: -1050px;
+        top: 0%;
+        left: 5%;
+    }
+
+    #skills{
+        position: absolute;
+        width: 30%;
+        margin-top: -850px;
+        top: 440%;
+        left: 5%;
+    }
+
+    #Certificates{
+        position: absolute;
+        margin-top: -430px;
+        width: 30%;
+        top: 285%;
+        left: 5%;
+    }
+
+    #workexperience{
+        position: absolute;
+        margin-top: -650px;
+        width: 22%;
+        top: 360%;
+        left: 10%;
+    }
+
+    #books{
+        position: absolute;
+        margin-top: -250px;
+        width: 30%;
+        left: 5%;
+    }
+
+    header .btn{
+        display: block;
+    }
+
+    header .menu{
+        position: fixed;
+        background: black;
+        flex-direction: column;
+        min-width: 400px;
+        height: 110vh;
+        top: 0;
+        right: -100%;
+        padding: 80px 50px;
+        transition: 0.5s;
+        transition-property: right;
+    }
+
+
+    header .menu.active{
+        right: 0;
+    }
+
+    .socials{
+        max-width: 100px;
+        max-height: 200px;
+        background-color: red;
+        background: #2c99ff;
+        color: #2c99ff;
+    }
+    header .menu .close-btn{
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 25px;
+        
+    }
+
+    header .menu a{
+        display: block;
+        font-size: 25px;
+        margin: 20px;
+        padding: 0 15px;
+    }
+
+    header .menu a:hover {
+        background-color: transparent;
+    }
+
+    .btn:hover {
+        color: black;
+    }
+
+    #insta1{
+        display: flexbox;
+        margin-top: -170%;
+        margin-left: 17%;
+    }
+    #reddit1
+    {
+            display: flexbox;
+            margin-top: -170%;
+            margin-left: 0%;
+    }
+    #twitter1
+    {
+        display: flexbox;
+        margin-top: -170%;
+        margin-left: 35%;
+    }
+    #head8
+ {
+    display:inline-flexbox;
+    left:11.5%;
+    
+ }
+}
+
+@media(max-width: 1080px) {
+    #insta1{
+        display: flexbox;
+        margin-top: 250%;
+        margin-left: 19%;
+        padding-bottom:120px;
+    }
+    #reddit1
+    {
+            display: flexbox;
+            margin-top: 250%;
+            margin-left: -7%;
+    }
+    #twitter1
+    {
+        display: flexbox;
+        margin-top: 250%;
+        margin-left: 45%;
+    }
+}
+
+@media (max-width: 690px){
+    .home h4{
+        font-size: 50px;
+        line-height: 70px;
+    }
+
+    #red{
+        visibility: hidden;
+        display: none;
+    }
+    #head3
+    {
+       display:inline-flexbox;
+       left:-3%;
+       
+    }
+    #head4
+ {
+    display:inline-flexbox;
+    left:-9%;
+ }
+    #head5
+ {
+    display:inline-flexbox;
+    left:-10%;
+    
+ }
+ 
+ #head6
+ {
+    display:inline-flexbox;
+    left:10%;
+    
+ }
+ #head7
+ {
+    display:inline-flexbox;
+    left:2%;
+    
+ }
+
+ #head8
+ {
+    display:inline-flexbox;
+    left:3%;
+    
+ }
+
+    #blue{
+        display: none;
+    }
+    #info2{
+        display: flexbox;
+        margin-left: -110px;
+        text-align:middle;
+    }
+    #info3{
+        display: flexbox;
+        margin-left: -110px;
+        text-align:middle;
+    }
+    #info4{
+        display: flexbox;
+        margin-left: -110px;
+        text-align:middle;
+    }
+    #info5{
+        display: flexbox;
+        margin-left: -110px;
+        text-align:middle;
+    }
+    #info6{
+        display: flexbox;
+        margin-left: -110px;
+        text-align:middle;
+    }
+    #info7{
+        display: flexbox;
+        margin-left: -110px;
+        text-align:middle;
+    }
+    #info8{
+        display: flexbox;
+        margin-left: -110px;
+        text-align:middle;
+    }
+    #books{
+        display: none;
+    }
+    #Certificates{
+     display: none;
+    }
+    #workexperience{
+        display: none;
+       }
+       #skills{
+        display: none;
+       }
+       #Projects{
+        display: none;
+       }
+       #insta1{
+        display: flexbox;
+        margin-top: 85%;
+        margin-left: 19%;
+        padding-bottom:120px;
+    }
+    #reddit1
+    {
+            display: flexbox;
+            margin-top: 85%;
+            margin-left: -7%;
+    }
+    #twitter1
+    {
+        display: flexbox;
+        margin-top: 85%;
+        margin-left: 45%;
+    }
+    
+ #head8
+ {
+    display:inline-flexbox;
+    left:5%;
+    
+ }
+ 
+
+}
+@media (max-width: 392px ){
+    #insta1{
+        display: flexbox;
+        margin-top: 200%;
+        margin-left: 19%;
+        padding-bottom:120px;
+    }
+    #reddit1
+    {
+            display: flexbox;
+            margin-top: 200%;
+            margin-left: -7%;
+    }
+    #twitter1
+    {
+        display: flexbox;
+        margin-top: 200%;
+        margin-left: 45%;
+    }
+
+ #head8
+ {
+    display:inline-flexbox;
+    left:5%;
+    
+ }
+}
+
+@media (max-width: 395px){
+    #insta1{
+        display: flexbox;
+        margin-top: 200%;
+        margin-left: 19%;
+        padding-bottom:120px;
+    }
+    #reddit1
+    {
+            display: flexbox;
+            margin-top: 200%;
+            margin-left: -7%;
+    }
+    #twitter1
+    {
+        display: flexbox;
+        margin-top: 200%;
+        margin-left: 45%;
+    }
+}
+
+@media (max-width: 377px ){
+    #insta1{
+        display: flexbox;
+        margin-top: 530%;
+        margin-left: 19%;
+        padding-bottom:120px;
+    }
+    #reddit1
+    {
+            display: flexbox;
+            margin-top: 530%;
+            margin-left: -7%;
+    }
+    #twitter1
+    {
+        display: flexbox;
+        margin-top: 530%;
+        margin-left: 45%;
+    }
+}
+
+/*/-----------about----------/*/
+
+#about {
+    display: flex;
+    padding: 60px 70px;
+}
+
+#head2{
+    position: relative;
+    color: #fff;
+    font-family: 'Poppins', sans-serif; 
+    margin-left: 41.5%;
+   margin-top: -5%;
+    margin-bottom: 6%;
+    font-size: 45px;
+}
+#info2{
+    color:#fff;
+    position: relative;
+    left: 40%;
+    padding: 20px;
+    max-width: 790px;
+    top: 128%;
+    font-size: 25px;
+    font-family: 'Chakra Petch', sans-serif;
+}
+img{
+    position: absolute;
+    width: 30%;
+    top: 132%;
+    left: 5%;
+}
+#red{
+    position: absolute;
+    margin-left: 850px;
+    margin-top: -780px;
+    visibility: visible;
+}
+#head3{
+    position: relative;
+    color:#fff;
+    margin-top: -4%;
+    margin-left: 41.5%;
+    padding-bottom: 3%;
+    top:176%;
+    font-family: 'Poppins', sans-serif; 
+    font-size: 45px;
+}
+#info3{
+    color:#fff;
+    position: relative;
+    left:40%;
+    padding: 25px;
+    max-width: 790px;
+    top: 215%;
+    font-size: 25px;
+    font-family: 'Chakra Petch', sans-serif;
+}
+#head4{
+    position: relative;
+    color:#fff;
+    margin-top: -4%;
+    margin-left: 42%;
+    padding-bottom: 4%;
+    top:276%;
+    font-family: 'Poppins', sans-serif; 
+    font-size: 45px;
+}
+#info4{
+    color:#fff;
+    position: relative;
+    left:40%;
+    max-width: 790px;
+    padding: 25px;
+    top: 315%;
+    font-size: 25px;
+    font-family: 'Chakra Petch', sans-serif;
+}
+#head5{
+    position: relative;
+    color:#fff;
+    margin-top: -4%;
+    margin-left: 41.5%;
+    padding-bottom: 4%;
+   top:377%;
+    font-family: 'Poppins', sans-serif; 
+    font-size: 45px;
+}
+#info5{
+    color:#fff;
+    position: relative;
+    left:40%;
+    max-width: 790px;
+    padding: 25px;
+    top: 425%;
+    font-size: 25px;
+    font-family: 'Chakra Petch', sans-serif;
+}
+#head6{
+    position: relative;
+    color:#fff;
+  margin-top: -4%;
+    margin-left: 41.5%;
+    padding-bottom: 4%;
+   top:476%;
+    font-family: 'Poppins', sans-serif; 
+    font-size: 45px;
+}
+#info6{
+    color:#fff;
+    position: relative;
+    left:40%;
+    padding: 25px;
+    max-width: 790px;
+    top: 515%;
+    font-size: 25px;
+    font-family: 'Chakra Petch', sans-serif;
+}
+#head7{
+    position: relative;
+    color:#fff;
+    margin-top: -4%;
+    margin-left: 41.5%;
+    padding-bottom: 4%;
+   top:575%;
+    font-family: 'Poppins', sans-serif; 
+    font-size: 45px;
+}
+#info7{
+    color:#fff;
+    position: relative;
+    left:40%;
+    max-width: 790px;
+    padding: 25px;
+    top: 615%;
+    font-size: 25px;
+    font-family: 'Chakra Petch', sans-serif;
+}
+#head8{
+    position: relative;
+    color:#fff;
+    justify-content: center;
+    align-items: center;
+   margin-left:42.1%;
+   margin-top: 220px;
+   margin-bottom: -500px;
+   padding-bottom: 30%;
+    font-family: 'Poppins', sans-serif; 
+    font-size: 45px;
+}
+#books{
+    position: absolute;
+    width: 30%;
+    top: 205.5%;
+    left: 5%;
+}
+#Certificates{
+ position: absolute;
+    width: 30%;
+    top: 286%;
+    left: 5%;
+}
+#workexperience{
+    position: absolute;
+       width: 28%;
+       top: 369%;
+   }
+   #skills{
+    position: absolute;
+       width: 30%;
+       top: 448.8222%;
+       left: 5%;
+   }
+   #Projects{
+    position: absolute;
+       width: 25%;
+       top: 512%;
+       left: 7%;
+   }
+#insta1{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 610%;
+    left: 47.5%;
+}
+
+#reddit1{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 610%;
+    left: 37%;
+}
+#twitter1{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 610%;
+    left: 58%;
+}
+
+#typewriter{
+color: rgb(0, 191, 255);
+
+}
